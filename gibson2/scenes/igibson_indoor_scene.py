@@ -118,7 +118,8 @@ class InteractiveIndoorScene(StaticIndoorScene):
         timestr = time.strftime("%Y%m%d-%H%M%S")
         # Create the subfolder
         self.scene_instance_folder = os.path.join(
-            gibson2.ig_dataset_path, "scene_instances",
+            "/workspace/ig_tmp/", "scene_instances",
+            # gibson2.ig_dataset_path, "scene_instances",
             '{}_{}_{}'.format(timestr, random.getrandbits(64), os.getpid()))
         os.makedirs(self.scene_instance_folder, exist_ok=True)
 
